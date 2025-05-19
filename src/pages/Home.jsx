@@ -11,7 +11,7 @@ function Home() {
         <div 
           className="absolute inset-0 z-0 bg-black opacity-60"
           style={{
-            backgroundImage: 'url(https://images.pexels.com/photos/1813272/pexels-photo-1813272.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2)',
+            backgroundImage: 'url(https://images.pexels.com/photos/1813272/pexels-photo-1813272.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=)',
             backgroundSize: 'cover',
             backgroundPosition: 'center',
           }}
@@ -60,7 +60,7 @@ function Home() {
               transition={{ duration: 0.6 }}
             >
               <img 
-                src="https://images.pexels.com/photos/2085752/pexels-photo-2085752.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" 
+                src="/src/assets/pexels-rdne-7697232.jpg" 
                 alt="Barbershop interior" 
                 className="rounded-lg shadow-xl w-full"
               />
