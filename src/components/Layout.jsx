@@ -33,6 +33,7 @@ function Layout({ children }) {
     { title: 'Services', path: '/services' },
     { title: 'Booking', path: '/booking' },
     { title: 'Contact', path: '/contact' },
+    { title: 'Admin', path: '/admin' },
   ]
 
   const headerClasses = `fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
