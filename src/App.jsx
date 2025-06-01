@@ -6,7 +6,7 @@ import About from './pages/About'
 import Services from './pages/Services'
 import Booking from './pages/Booking'
 import Contact from './pages/Contact'
-import AdminPanel from './pages/AdminPanel'
+// import AdminPanel from './pages/AdminPanel'
 
 function App() {
   const location = useLocation()
@@ -20,7 +20,7 @@ function App() {
           <Route path="/services" element={<Services />} />
           <Route path="/booking" element={<Booking />} />
           <Route path="/contact" element={<Contact />} />
-          <Route path="/admin" element={<AdminPanel />} />
+          {/* <Route path="/admin" element={<AdminPanel />} /> */}
         </Routes>
       </AnimatePresence>
     </Layout>
