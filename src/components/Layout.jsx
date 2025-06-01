@@ -27,13 +27,24 @@ function Layout({ children }) {
     }
   }, [scrolled])
 
+  // Lock background scroll when mobile menu is open
+  useEffect(() => {
+    if (isOpen) {
+      document.body.classList.add('overflow-hidden')
+    } else {
+      document.body.classList.remove('overflow-hidden')
+    }
+    // Clean up in case component unmounts while menu is open
+    return () => document.body.classList.remove('overflow-hidden')
+  }, [isOpen])
+
   const navLinks = [
     { title: 'Home', path: '/' },
     { title: 'About', path: '/about' },
     { title: 'Services', path: '/services' },
     { title: 'Booking', path: '/booking' },
     { title: 'Contact', path: '/contact' },
-    { title: 'Admin', path: '/admin' },
+    // { title: 'Admin', path: '/admin' },
   ]
 
   const headerClasses = `fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
@@ -69,7 +80,7 @@ function Layout({ children }) {
 
           {/* Mobile Menu Button */}
           <button 
-            className="md:hidden z-50 relative"
+            className={`md:hidden z-50 relative ${isOpen ? 'text-white' : ''}`}
             onClick={() => setIsOpen(!isOpen)}
             aria-label={isOpen ? "Close menu" : "Open menu"}
           >
